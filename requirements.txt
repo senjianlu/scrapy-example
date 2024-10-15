@@ -1,0 +1,2 @@
+Scrapy==2.11.2
+crawlab==0.1.0a8
