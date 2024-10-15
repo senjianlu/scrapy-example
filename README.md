@@ -54,3 +54,56 @@ scrapy crawl quotes
 
 ### 二、通过 Crawlab 运行
 #### 1、创建爬虫
+下载后解压，得到这样的目录结构：  
+![目录结构](https://image.senjianlu.com/blog/2024-10-15/simple_project.png)  
+
+```text
+scrapy-example
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── my_example_spiders
+    ├── scrapy.cfg
+    └── my_example_spiders
+        ├── __init__.py
+        ├── items.py
+        ├── middlewares.py
+        ├── pipelines.py
+        ├── settings.py
+        └── spiders
+            ├── __init__.py
+            └── quotes.py
+```
+
+**需要上传的是 `scrapy-example-master` 下面的 `my_example_spiders` 目录**（更上层一点的 `my_example_spiders` 目录）。
+
+在页面上新建爬虫：  
+- 名称：`my_example_spiders`
+- 执行命令：`scrapy crawl quotes`
+
+![新建爬虫](https://image.senjianlu.com/blog/2024-10-15/new_spider2.png)  
+
+之后进入爬虫，点击上传：  
+![点击上传按钮](https://image.senjianlu.com/blog/2024-10-15/upload_spider2.png)  
+![选择 my_example_spiders 目录](https://image.senjianlu.com/blog/2024-10-15/upload_spider_files2.png)  
+
+上传成功后，在左侧文件列表中可以双击打开文件：  
+![上传成功](https://image.senjianlu.com/blog/2024-10-15/upload_success2.png)  
+
+#### 2、运行爬虫
+点击爬虫的运行按钮：  
+![运行](https://image.senjianlu.com/blog/2024-10-15/click_run_button2.png)  
+![开始](https://image.senjianlu.com/blog/2024-10-15/spider_start.png)  
+
+稍等片刻不出以外会成功：  
+![运行成功](https://image.senjianlu.com/blog/2024-10-15/spider_success.png)  
+> 如果出现 `File not found` 或是 `undefined` 之类的错误，大概率是你的爬虫目录上传错了。  
+
+前往任务菜单，可以找到对应执行的日志：  
+![点击查看日志](https://image.senjianlu.com/blog/2024-10-15/log.png)  
+![详细日志](https://image.senjianlu.com/blog/2024-10-15/more_log.png)
+
+点击数据可以看到相关的爬取结果：  
+![数据](https://image.senjianlu.com/blog/2024-10-15/data.png)  
+视情况导出：  
+![导出数据](https://image.senjianlu.com/blog/2024-10-15/output.png)
